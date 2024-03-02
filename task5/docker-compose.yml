@@ -21,5 +21,5 @@ services:
     ports:
       - 80:80
     depends_on:
-      -back-end
-      -front-end
+      - back-end
+      - front-end
