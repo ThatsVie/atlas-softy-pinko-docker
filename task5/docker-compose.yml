@@ -19,7 +19,7 @@ services:
       dockerfile: Dockerfile
     image: softy-pinko-proxy:task5
     ports:
-      - 80:80
+      - "80:80"
     depends_on:
       - back-end
       - front-end
