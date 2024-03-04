@@ -19,19 +19,19 @@ Here we set up the front-end for the Softy Pinko project. This involves reorgani
 
 **Task 3:** Basic Load Balancing
 
-In this task we connect the front-end to the back-end of the Softy Pinko project, allowing dynamic data exchange between the two Docker containers.
+In this task we connect the front-end to the back-end of the Softy Pinko project,enabling dynamic data on our front-end. This involves communication between two Docker images, each running in its own Docker container.
 
 **Task 4:** Persistent Storage
 
-Configure persistent storage for the API server using Docker volumes to ensure data integrity and availability.
+In this task we simplify the management of our application components by using Docker Compose. Docker Compose allows us to define and manage multi-container Docker applications with a single configuration file. This reduces complexity and streamlines the process of spinning up multiple Docker containers.
 
 **Task 5:** Container Orchestration
 
-Use Docker Compose to orchestrate multiple containers and manage the dependencies between them effectively.
+Here we implement a proxy server using Nginx to serve as an intermediary between the client and our application's front-end and back-end servers. This allows us to simplify the client-side configuration and decouples the client from the specific locations of the application's components.
 
 **Task 6:** Scale Horizontally
 
-Achieve horizontal scaling by adding multiple instances of the API server and configuring Nginx to load balance requests between them using the Round-Robin algorithm.
+Finally, we address the scenario where the traffic to your site increases significantly, potentially overwhelming your API server. To handle this situation, we will set up multiple API servers and use Nginx for load balancing between them. The goal is to launch Docker containers such that we have two or more API servers. Nginx will act as a load balancer, distributing incoming requests among these servers using the Round-Robin load-balancing algorithm.
 
 ## Usage
-Once the setup is complete for each task, you can access the respective web application or API through the Nginx load balancer. Nginx will evenly distribute incoming requests among the available API server instances.
+Once the setup is complete for each task, we can access the respective web application or API through the Nginx load balancer. Nginx will evenly distribute incoming requests among the available API server instances.
