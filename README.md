@@ -7,19 +7,19 @@ Make sure you have Docker installed on your system.
 ## Tasks Overview
 **Task 0:** Setup Docker Environment
 
-Set up a basic Docker environment and run a simple web server container.
+In this task we create a Docker image using a Dockerfile. The Docker image is based on the latest Ubuntu distribution, and upon running a container from this image, it will echo "Hello, World!" in the terminal.
 
 **Task 1:** Static Content Proxy Server
 
-Create a proxy server using Nginx to route requests to a static-content server.
+Here we set up a Flask-based back-end within a Docker container. The back-end consists of a Flask server hosting one endpoint that returns "Hello, World!" when called.
 
 **Task 2:** Dynamic Content API Server
 
-Set up an API server using Flask to serve dynamic content and configure Nginx to proxy requests to it.
+Here we set up the front-end for the Softy Pinko project. This involves reorganizing the project directory, setting up a static web server using Nginx, and configuring it to serve the front-end content.
 
 **Task 3:** Basic Load Balancing
 
-Implement basic load balancing with Nginx to distribute incoming requests among multiple instances of the API server.
+In this task we connect the front-end to the back-end of the Softy Pinko project, allowing dynamic data exchange between the two Docker containers.
 
 **Task 4:** Persistent Storage
 
