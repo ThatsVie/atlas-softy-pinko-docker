@@ -2,7 +2,7 @@
 This repository contains code for setting up horizontal scaling with Nginx and Docker as part of the Atlas Softy Pinko Docker project. The setup includes multiple API server instances and Nginx to distribute incoming requests among them.
 
 ## Prerequisites
-Make sure you have Docker installed on your system. 
+Make sure you have Docker installed on your system. You can download and install Docker from the official website: [Docker](https://www.docker.com/get-started).
 
 ## Tasks Overview
 **Task 0:** Setup Docker Environment
