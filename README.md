@@ -30,7 +30,9 @@ Set up a Flask-based back-end within a Docker container. The back-end consists o
 
 ### Task 2: Dynamic Content API Server
 
-Set up the front-end for the Softy Pinko project, including reorganizing the project directory, setting up a static web server using Nginx, and configuring it to serve front-end content.
+Set up the front-end for the Softy Pinko project, including cloning this repository: [Softy Pinko Front-end Repository](https://github.com/atlas-school/softy-pinko-front-end), reorganizing the project directory, setting up a static web server using Nginx, and configuring it to serve front-end content.
+
+**Note:** To ensure easy editing and management of the cloned repository,it was copied to a different directory, given a different name, then the original was deleted and the copy renamed with its original name. This approach allowed for seamless integration of the cloned repository.
 
 ### Task 3: Basic Load Balancing
 
