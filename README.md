@@ -1,6 +1,6 @@
 # Atlas - Softy Pinko Docker
 
-This project demonstrates the setup of a Dockerized environment for a web application comprising front-end, back-end, and proxy servers. It encompasses tasks from 0 to 6, each focusing on different aspects of containerization, deployment, and scalability.
+This project demonstrates the setup of a Dockerized environment for a web application comprising front-end, back-end, and proxy servers. It encompasses tasks 0 to 6, each focusing on different aspects of containerization, deployment, and scalability.
 
 ## Prerequisites
 
@@ -59,63 +59,57 @@ Clone this repository to your local machine using the following command:
 ```bash
 git clone https://github.com/ThatsVie/atlas-softy-pinko-docker.git
 ```
-### Task 0: Setup Docker Environment
+### Task 0:
 
 1. Navigate to the `task0` directory.
    ```bash
    cd atlas-softy-pinko-docker/task0
    ```
-2. Build the Docker Image: Run the following command to build the Docker image using the Dockerfile:
+2. Run the following command to build the Docker image using the Dockerfile:
    ```bash
    docker build -t softy-pinko:task0 .
    ```
-3. Run the Docker Container: Once the image is built, run the Docker container using the following command:
+3. Once the image is built, run the Docker container using the following command:
    ```bash
    docker run -it --rm --name softy-pinko-task0 softy-pinko:task0
    ```
-4. Verify Output: You should see "Hello, World!" printed in the terminal, indicating that the container is running successfully.
+4. You should see "Hello, World!" printed in the terminal, indicating that the container is running successfully.
 
-### Task 1: Dockerizing a Simple Web Application
+### Task 1
 
 1. Navigate to the `task1` directory.
    ```bash
    cd atlas-softy-pinko-docker/task1
    ```
-2. Build and Run Docker Image
-   Use the following commands in the terminal to build and run your Docker image:
+2. Use the following commands in the terminal to build and run your Docker image:
    ```bash
    docker build -f ./Dockerfile -t softy-pinko:task1 .
    docker run -p 5252:5252 -it --rm --name softy-pinko-task1 softy-pinko:task1
    ```
-   The -p 5252:5252 flag maps port 5252 of the Docker container to port 5252 of the host machine, allowing you to access the    Flask application from your local environment.
+   The -p 5252:5252 flag maps port 5252 of the Docker container to port 5252 of the host machine, allowing you to access the Flask application from your local environment.
 
-3. Access Your Flask Application
+3. Once the Docker container is running, open a web browser and navigate to http://localhost:5252/api/hello. You should see the "Hello, World!" message displayed in the browser.
 
-   Once the Docker container is running, open a web browser and navigate to http://localhost:5252/api/hello. You should see the "Hello, World!" message displayed in the browser.
-
-### Task 2: Dynamic Content API Server
+### Task 2:
 
 1. Navigate to the `task2` directory.
    ```bash
     cd atlas-softy-pinko-docker/task2
    ```
-2. Build and Run Docker Image
-   Use the following commands in the terminal to build and run your Docker image:
+2. Use the following commands in the terminal to build and run your Docker image:
    ```bash
    docker build -f ./front-end/Dockerfile -t softy-pinko-front-end:task2 ./front-end
    docker run -p 9000:9000 -it --rm --name softy-pinko-front-end-task2 softy-pinko-front-end:task2
    ```
-3. Access Your Front-end Static Content
-   Once the Docker container is running, open a web browser and navigate to http://localhost:9000. You should see the Softy Pinko front-end website displayed in the browser.
+3. Once the Docker container is running, open a web browser and navigate to http://localhost:9000. You should see the Softy Pinko front-end website displayed in the browser.
 
-### Task 3: Basic Load Balancing
-**NOTE: Before starting Task 3, ensure that you stop any running instances of Task 2. Since both Task 2 and Task 3 involve front-end applications, they use the same port for hosting the front-end content. Failing to stop Task 2 might result in port conflicts, causing issues with accessing the front-end of Task 3.**
+### Task 3:
+**Note: Before starting Task 3, ensure that you stop any running instances of Task 2. Since both Task 2 and Task 3 involve front-end applications, they use the same port for hosting the front-end content. Failing to stop Task 2 might result in port conflicts, causing issues with accessing the front-end of Task 3.**
 1. Navigate to the `task3` directory.
    ```bash
     cd atlas-softy-pinko-docker/task3
    ```
-2. Build and Run Back-end Docker Image
-Navigate to the task3/back-end directory. Then, build and run the Docker image for the back-end:
+2. Navigate to the task3/back-end directory. Then, build and run the Docker image for the back-end:
    ```bash
    docker build -f ./Dockerfile -t softy-pinko-back-end:task3 .
    docker run -p 5252:5252 -it --rm --name softy-pinko-back-end-task3 softy-pinko-back-end:task3
@@ -125,10 +119,9 @@ Navigate to the task3/back-end directory. Then, build and run the Docker image f
    docker build -f ./Dockerfile -t softy-pinko-front-end:task3 .
    docker run -p 9000:9000 -it --rm --name softy-pinko-front-end-task3 softy-pinko-front-end:task3
    ```
-4. Access Your Front-end with Dynamic Content
-   Once both Docker containers are running, open a web browser and navigate to http://localhost:9000. You should see the Softy Pinko front-end website with dynamic content retrieved from the back-end API.
+4. Once both Docker containers are running, open a web browser and navigate to http://localhost:9000. You should see the Softy Pinko front-end website with dynamic content retrieved from the back-end API.
 
-### Task 4: Persistent Storage
+### Task 4:
 **Note: Before running docker-compose up for Task 4, please ensure that you have stopped any running containers from Task 3. Since Task 3 and Task 4 use the same ports, failing to stop Task 3 containers may result in port conflicts, leading to errors like:**
    ```bash
    Error response from daemon: driver failed programming external connectivity on endpoint task4-front-end-1: Bind for 0.0.0.0:9000 failed: port is already allocated
@@ -139,29 +132,27 @@ Navigate to the task3/back-end directory. Then, build and run the Docker image f
    ```bash
     cd atlas-softy-pinko-docker/task4
    ```
-2. Building and Running:
-   Use the following commands
+2. Use the following commands
    ```bash
    docker-compose build
    docker-compose up
    ```
-3.  Open a web browser and go to `http://localhost:80` to view the front-end content.
+3. Open a web browser and go to `http://localhost:80` to view the front-end content.
 
-### Task 5: Container Orchestration
+### Task 5:
 
 1. Open a new terminal and navigate to the `task5` directory.
    ```bash
     cd atlas-softy-pinko-docker/task5
    ```
-2.  Building and Running:
-   Use the following commands
+2. Use the following commands
    ```bash
    docker-compose build
    docker-compose up
    ```
 3. Access the application via http://localhost:80 in your browser, which is now routed through the proxy server.
 
-### Task 6: Scale Horizontally
+### Task 6:
 
 1. Open a new terminal and navigate to the `task6` directory.
    ```bash
