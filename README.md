@@ -105,15 +105,30 @@ git clone https://github.com/ThatsVie/atlas-softy-pinko-docker.git
    docker build -f ./front-end/Dockerfile -t softy-pinko-front-end:task2 ./front-end
    docker run -p 9000:9000 -it --rm --name softy-pinko-front-end-task2 softy-pinko-front-end:task2
    ```
-3. Access Your Front-end
+3. Access Your Front-end Static Content
 
 Once the Docker container is running, open a web browser and navigate to http://localhost:9000. You should see the Softy Pinko front-end website displayed in the browser.
 
 ### Task 3: Basic Load Balancing
-
+**NOTE: Before starting Task 3, ensure that you stop any running instances of Task 2. Since both Task 2 and Task 3 involve front-end applications, they use the same port for hosting the front-end content. Failing to stop Task 2 might result in port conflicts, causing issues with accessing the front-end of Task 3.**
 1. Navigate to the `task3` directory.
-2. Run the command `docker-compose up --build` to build the Docker images and start the containers.
-3. Open a web browser and go to `http://localhost:80` to view the front-end content, which communicates with the back-end API.
+   ```bash
+    cd atlas-softy-pinko-docker/task3
+   ```
+2. Build and Run Back-end Docker Image
+Navigate to the task3/back-end directory. Then, build and run the Docker image for the back-end:
+   ```bash
+   docker build -f ./Dockerfile -t softy-pinko-back-end:task3 .
+   docker run -p 5252:5252 -it --rm --name softy-pinko-back-end-task3 softy-pinko-back-end:task3
+   ```
+3. Open another terminal and navigate to the task3/front-end directory. Then, build and run the Docker image for the front-end:
+   ```bash
+   docker build -f ./Dockerfile -t softy-pinko-front-end:task3 .
+   docker run -p 9000:9000 -it --rm --name softy-pinko-front-end-task3 softy-pinko-front-end:task3
+   ```
+4. Access Your Front-end with Dynamic Content
+
+Once both Docker containers are running, open a web browser and navigate to http://localhost:9000. You should see the Softy Pinko front-end website with dynamic content retrieved from the back-end API.
 
 ### Task 4: Persistent Storage
 
