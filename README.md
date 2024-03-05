@@ -106,7 +106,8 @@ git clone https://github.com/ThatsVie/atlas-softy-pinko-docker.git
 3. Once the Docker container is running, open a web browser and navigate to http://localhost:9000. You should see the Softy Pinko front-end website displayed in the browser.
 
 ### Task 3:
-**Note: Before starting Task 3, ensure that you stop any running instances of Task 2. Since both Task 2 and Task 3 involve front-end applications, they use the same port for hosting the front-end content. Failing to stop Task 2 might result in port conflicts, causing issues with accessing the front-end of Task 3.**
+   **Note: Before starting Task 3, ensure that you stop any running instances of Task 2. Since both Task 2 and Task 3 involve front-end applications, they use the same port for hosting the front-end content. Failing to stop Task 2 might result in port conflicts, causing issues with accessing the front-end of Task 3.**
+   
 1. Navigate to the `task3` directory.
    ```bash
     cd atlas-softy-pinko-docker/task3
@@ -124,7 +125,8 @@ git clone https://github.com/ThatsVie/atlas-softy-pinko-docker.git
 4. Once both Docker containers are running, open a web browser and navigate to http://localhost:9000. You should see the Softy Pinko front-end website with dynamic content retrieved from the back-end API.
 
 ### Task 4:
-**Note: Before running docker-compose up for Task 4, please ensure that you have stopped any running containers from Task 3. Since Task 3 and Task 4 use the same ports, failing to stop Task 3 containers may result in port conflicts, leading to errors like:**
+   **Note: Before running docker-compose up for Task 4, please ensure that you have stopped any running containers from Task 3. Since Task 3 and Task 4 use the same ports, failing to stop Task 3 containers may result in port conflicts, leading to errors like:**
+   
    ```bash
    Error response from daemon: driver failed programming external connectivity on endpoint task4-front-end-1: Bind for 0.0.0.0:9000 failed: port is already allocated
 
