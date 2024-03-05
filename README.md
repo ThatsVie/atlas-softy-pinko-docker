@@ -90,7 +90,7 @@ git clone https://github.com/ThatsVie/atlas-softy-pinko-docker.git
    ```
    The -p 5252:5252 flag maps port 5252 of the Docker container to port 5252 of the host machine, allowing you to access the Flask application from your local environment.
 
-3. Once the Docker container is running, open a web browser and navigate to http://localhost:5252/api/hello. You should see the "Hello, World!" message displayed in the browser.
+3. Once the Docker container is running, open a web browser and navigate to `http://localhost:5252/api/hello`. You should see the "Hello, World!" message displayed in the browser.
 
 ### Task 2:
 
@@ -103,7 +103,7 @@ git clone https://github.com/ThatsVie/atlas-softy-pinko-docker.git
    docker build -f ./front-end/Dockerfile -t softy-pinko-front-end:task2 ./front-end
    docker run -p 9000:9000 -it --rm --name softy-pinko-front-end-task2 softy-pinko-front-end:task2
    ```
-3. Once the Docker container is running, open a web browser and navigate to http://localhost:9000. You should see the Softy Pinko front-end website displayed in the browser.
+3. Once the Docker container is running, open a web browser and navigate to `http://localhost:9000`. You should see the Softy Pinko front-end website displayed in the browser.
 
 ### Task 3:
    **Note: Before starting Task 3, ensure that you stop any running instances of Task 2. Since both Task 2 and Task 3 involve front-end applications, they use the same port for hosting the front-end content. Failing to stop Task 2 might result in port conflicts, causing issues with accessing the front-end of Task 3.**
@@ -122,7 +122,7 @@ git clone https://github.com/ThatsVie/atlas-softy-pinko-docker.git
    docker build -f ./Dockerfile -t softy-pinko-front-end:task3 .
    docker run -p 9000:9000 -it --rm --name softy-pinko-front-end-task3 softy-pinko-front-end:task3
    ```
-4. Once both Docker containers are running, open a web browser and navigate to http://localhost:9000. You should see the Softy Pinko front-end website with dynamic content retrieved from the back-end API.
+4. Once both Docker containers are running, open a web browser and navigate to `http://localhost:9000`. You should see the Softy Pinko front-end website with dynamic content retrieved from the back-end API.
 
 ### Task 4:
    **Note: Before running docker-compose up for Task 4, please ensure that you have stopped any running containers from Task 3. Since Task 3 and Task 4 use the same ports, failing to stop Task 3 containers may result in port conflicts, leading to errors like:**
@@ -154,7 +154,7 @@ git clone https://github.com/ThatsVie/atlas-softy-pinko-docker.git
    docker-compose build
    docker-compose up
    ```
-3. Access the application via http://localhost:80 in your browser, which is now routed through the proxy server.
+3. Access the application via `http://localhost:80` in your browser, which is now routed through the proxy server.
 
 ### Task 6:
 
