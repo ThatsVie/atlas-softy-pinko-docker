@@ -163,7 +163,7 @@ Navigate to the task3/back-end directory. Then, build and run the Docker image f
 
 ### Task 6: Scale Horizontally
 
-1. Open a new terminal and navigate to the `task`6 directory.
+1. Open a new terminal and navigate to the `task6` directory.
    ```bash
     cd atlas-softy-pinko-docker/task6
    ```
