@@ -149,9 +149,17 @@ Navigate to the task3/back-end directory. Then, build and run the Docker image f
 
 ### Task 5: Container Orchestration
 
-1. Navigate to the `task5` directory.
-2. Run the command `docker-compose up --build` to build the Docker images and start the containers.
-3. Open a web browser and go to `http://localhost:80` to view the front-end content.
+1. Open a new terminal and navigate to the `task5` directory.
+   ```bash
+    cd atlas-softy-pinko-docker/task5
+   ```
+2.  Building and Running:
+   Use the following commands
+   ```bash
+   docker-compose build
+   docker-compose up
+   ```
+3. Access the application via http://localhost:80 in your browser, which is now routed through the proxy server.
 
 ### Task 6: Scale Horizontally
 
