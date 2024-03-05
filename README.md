@@ -61,15 +61,38 @@ git clone https://github.com/ThatsVie/atlas-softy-pinko-docker.git
 ```
 ### Task 0: Setup Docker Environment
 
-1. Navigate to the `task0` directory.
-2. Run the command `docker-compose up --build` to build the Docker image and start the container.
-3. Open a web browser and go to `http://localhost:5000` to view the "Hello, World!" message.
+1. Navigate to Task 0 Directory: Change your current directory to the task0 directory of the cloned repository:
+   ```bash
+   cd atlas-softy-pinko-docker/task0
+   ```
+2.Build the Docker Image: Run the following command to build the Docker image using the Dockerfile:
+```bash
+docker build -t softy-pinko:task0 .
+```
+3. Run the Docker Container: Once the image is built, run the Docker container using the following command:
+```bash
+docker run -it --rm --name softy-pinko-task0 softy-pinko:task0
+```
+4. Verify Output: You should see "Hello, World!" printed in the terminal, indicating that the container is running successfully.
 
 ### Task 1: Dockerizing a Simple Web Application
 
 1. Navigate to the `task1` directory.
-2. Run the command `docker-compose up --build` to build the Docker image and start the container.
-3. Open a web browser and go to `http://localhost:5000` to view the Flask application's endpoint.
+     ```bash
+   cd atlas-softy-pinko-docker/task1
+   ```
+2. Build and Run Docker Image
+
+Use the following commands in the terminal to build and run your Docker image:
+```bash
+docker build -f ./Dockerfile -t softy-pinko:task1 .
+docker run -p 5252:5252 -it --rm --name softy-pinko-task1 softy-pinko:task1
+```
+The -p 5252:5252 flag maps port 5252 of the Docker container to port 5252 of the host machine, allowing you to access the Flask application from your local environment.
+
+3. Access Your Flask Application
+
+Once the Docker container is running, open a web browser and navigate to http://localhost:5252/api/hello. You should see the "Hello, World!" message displayed in the browser.
 
 ### Task 2: Dynamic Content API Server
 
