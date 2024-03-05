@@ -106,8 +106,7 @@ git clone https://github.com/ThatsVie/atlas-softy-pinko-docker.git
    docker run -p 9000:9000 -it --rm --name softy-pinko-front-end-task2 softy-pinko-front-end:task2
    ```
 3. Access Your Front-end Static Content
-
-Once the Docker container is running, open a web browser and navigate to http://localhost:9000. You should see the Softy Pinko front-end website displayed in the browser.
+   Once the Docker container is running, open a web browser and navigate to http://localhost:9000. You should see the Softy Pinko front-end website displayed in the browser.
 
 ### Task 3: Basic Load Balancing
 **NOTE: Before starting Task 3, ensure that you stop any running instances of Task 2. Since both Task 2 and Task 3 involve front-end applications, they use the same port for hosting the front-end content. Failing to stop Task 2 might result in port conflicts, causing issues with accessing the front-end of Task 3.**
@@ -127,14 +126,26 @@ Navigate to the task3/back-end directory. Then, build and run the Docker image f
    docker run -p 9000:9000 -it --rm --name softy-pinko-front-end-task3 softy-pinko-front-end:task3
    ```
 4. Access Your Front-end with Dynamic Content
-
-Once both Docker containers are running, open a web browser and navigate to http://localhost:9000. You should see the Softy Pinko front-end website with dynamic content retrieved from the back-end API.
+   Once both Docker containers are running, open a web browser and navigate to http://localhost:9000. You should see the Softy Pinko front-end website with dynamic content retrieved from the back-end API.
 
 ### Task 4: Persistent Storage
+**Note: Before running docker-compose up for Task 4, please ensure that you have stopped any running containers from Task 3. Since Task 3 and Task 4 use the same ports, failing to stop Task 3 containers may result in port conflicts, leading to errors like:**
+   ```bash
+   Error response from daemon: driver failed programming external connectivity on endpoint task4-front-end-1: Bind for 0.0.0.0:9000 failed: port is already allocated
 
-1. Navigate to the `task4` directory.
-2. Run the command `docker-compose up --build` to build the Docker images and start the containers.
-3. Open a web browser and go to `http://localhost:80` to view the front-end content.
+   Error response from daemon: driver failed programming external connectivity on endpoint task4-back-end-1: Bind for 0.0.0.0:5252 failed: port is already allocated
+   ```
+1. Open a new terminal and navigate to the `task4` directory.
+   ```bash
+    cd atlas-softy-pinko-docker/task4
+   ```
+2. Building and Running:
+   Use the following commands
+   ```bash
+   docker-compose build
+   docker-compose up
+   ```
+3.  Open a web browser and go to `http://localhost:80` to view the front-end content.
 
 ### Task 5: Container Orchestration
 
