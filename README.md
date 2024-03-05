@@ -22,7 +22,7 @@ The project is structured into multiple tasks, each contained within its own dir
 
 ### Task 0: Setup Docker Environment
 
-Initialize a basic Docker environment by installing Docker Desktop. Create a Docker image using a Dockerfile based on the latest Ubuntu distribution. Upon running a container from this image, it will echo "Hello, World!" in the terminal.
+Initialize a basic Docker environment by installing Docker Desktop. Alternatively, ensure you are at the very least operating with Docker Engine and Docker Compose. Create a Docker image using a Dockerfile based on the latest Ubuntu distribution. Upon running a container from this image, it will echo "Hello, World!" in the terminal.
 
 ### Task 1: Dockerizing a Simple Web Application
 
