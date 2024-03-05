@@ -57,7 +57,7 @@ Follow these steps to run each task and access the deployed web application or A
 
 1. Clone this repository to your local machine using the following command:
 ```bash
-git clone
+git clone https://github.com/ThatsVie/atlas-softy-pinko-docker.git
 ```
 ### Task 0: Setup Docker Environment
 
