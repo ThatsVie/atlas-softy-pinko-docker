@@ -163,6 +163,12 @@ Navigate to the task3/back-end directory. Then, build and run the Docker image f
 
 ### Task 6: Scale Horizontally
 
-1. Navigate to the `task6` directory.
-2. Run the command `docker-compose up --build` to build the Docker images and start the containers.
-3. Open a web browser and go to `http://localhost:80` to view the front-end content. Reload the page multiple times to observe the load balancing between multiple API servers.
+1. Open a new terminal and navigate to the `task`6 directory.
+   ```bash
+    cd atlas-softy-pinko-docker/task6
+   ```
+2. Run command
+   ```bash
+   docker-compose up --scale back-end=2
+   ```
+4. Open a web browser and go to `http://localhost:80` to view the front-end content. Reload the page multiple times and check the terminal output to see how requests are being load-balanced between the two API servers. The back-end server that the Nginx load balancer routes to should alternate between task6-back-end-1 and task6-back-end-2.
