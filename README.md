@@ -86,6 +86,8 @@ git clone https://github.com/ThatsVie/atlas-softy-pinko-docker.git
 2. Use the following commands in the terminal to build and run your Docker image:
    ```bash
    docker build -f ./Dockerfile -t softy-pinko:task1 .
+   ```
+   ```bash
    docker run -p 5252:5252 -it --rm --name softy-pinko-task1 softy-pinko:task1
    ```
    The -p 5252:5252 flag maps port 5252 of the Docker container to port 5252 of the host machine, allowing you to access the Flask application from your local environment.
@@ -101,6 +103,8 @@ git clone https://github.com/ThatsVie/atlas-softy-pinko-docker.git
 2. Use the following commands in the terminal to build and run your Docker image:
    ```bash
    docker build -f ./front-end/Dockerfile -t softy-pinko-front-end:task2 ./front-end
+   ```
+   ```bash
    docker run -p 9000:9000 -it --rm --name softy-pinko-front-end-task2 softy-pinko-front-end:task2
    ```
 3. Once the Docker container is running, open a web browser and navigate to `http://localhost:9000`. You should see the Softy Pinko front-end website displayed in the browser.
@@ -115,11 +119,15 @@ git clone https://github.com/ThatsVie/atlas-softy-pinko-docker.git
 2. Navigate to the task3/back-end directory. Then, build and run the Docker image for the back-end:
    ```bash
    docker build -f ./Dockerfile -t softy-pinko-back-end:task3 .
+   ```
+   ```bash
    docker run -p 5252:5252 -it --rm --name softy-pinko-back-end-task3 softy-pinko-back-end:task3
    ```
 3. Open another terminal and navigate to the task3/front-end directory. Then, build and run the Docker image for the front-end:
    ```bash
    docker build -f ./Dockerfile -t softy-pinko-front-end:task3 .
+   ```
+   ```bash
    docker run -p 9000:9000 -it --rm --name softy-pinko-front-end-task3 softy-pinko-front-end:task3
    ```
 4. Once both Docker containers are running, open a web browser and navigate to `http://localhost:9000`. You should see the Softy Pinko front-end website with dynamic content retrieved from the back-end API.
@@ -139,6 +147,8 @@ git clone https://github.com/ThatsVie/atlas-softy-pinko-docker.git
 2. Use the following commands
    ```bash
    docker-compose build
+   ```
+   ```bash
    docker-compose up
    ```
 3. Open a web browser and go to `http://localhost:80` to view the front-end content.
@@ -152,6 +162,8 @@ git clone https://github.com/ThatsVie/atlas-softy-pinko-docker.git
 2. Use the following commands
    ```bash
    docker-compose build
+   ```
+   ```bash
    docker-compose up
    ```
 3. Access the application via `http://localhost:80` in your browser, which is now routed through the proxy server.
